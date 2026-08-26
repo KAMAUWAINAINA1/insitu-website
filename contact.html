@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Insitu Resources Advisory Ltd</title>
+<meta name="description" content="Get in touch about a mining partnership or an advisory brief.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Insitu Resources Advisory home">
+        <svg width="30" height="30" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="80" fill="none" stroke="#f2ede3" stroke-width="14"/><circle cx="100" cy="100" r="52" fill="none" stroke="#c8842f" stroke-width="14"/><circle cx="100" cy="100" r="22" fill="#f2ede3"/></svg>
+        <span class="brand-name">Insitu <span>Resources</span></span>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="mining.html">Mining</a>
+        <a href="advisory.html">Advisory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding:9px 18px">Contact</a>
+      </div>
+      <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    </nav>
+  </div>
+</header>
+<section class="phero">
+  <svg class="phero-rings" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="80" fill="none" stroke="#2f3e4a" stroke-width="10"/><circle cx="100" cy="100" r="52" fill="none" stroke="#7a5320" stroke-width="10"/><circle cx="100" cy="100" r="22" fill="#2f3e4a"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Start a conversation</h1>
+    <p>Whether it is a partnership on the mining side or an advisory brief, tell us what you are working on and we will come back to you.</p>
+  </div>
+</section>
+
+<section class="block on-dark">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Reach us</p>
+        <h2 style="color:var(--cream);font-size:clamp(26px,3.4vw,36px);margin:14px 0 22px">Contact details</h2>
+        <ul class="cinfo">
+          <li><span class="k">Phone</span><a class="v" href="tel:+254701589996">0701 589 996</a></li>
+          <li><span class="k">Email</span><a class="v" href="mailto:info@insituresourcesadvisoryltd.africa">info@insituresourcesadvisoryltd.africa</a></li>
+          <li><span class="k">Post</span><span class="v">PO Box 64960-00620, Nairobi, Kenya</span></li>
+        </ul>
+      </div>
+      <div>
+        <form onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Thanks. This is a demo form. Connect it to a form service or your inbox to receive messages.';">
+          <div class="frow">
+            <input type="text" placeholder="Full name" required>
+            <input type="text" placeholder="Company">
+          </div>
+          <input type="email" placeholder="Email address" required>
+          <input type="text" placeholder="Subject (mining partnership / advisory)">
+          <textarea rows="4" placeholder="Tell us about your ground, project, or question"></textarea>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg width="26" height="26" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="80" fill="none" stroke="#8fa2ab" stroke-width="14"/><circle cx="100" cy="100" r="52" fill="none" stroke="#c8842f" stroke-width="14"/><circle cx="100" cy="100" r="22" fill="#8fa2ab"/></svg>
+          <span class="brand-name" style="color:#c3ccd2">Insitu <span style="color:#6f838d">Resources Advisory Ltd</span></span>
+        </div>
+        <p>An African mining and mineral resources advisory company. We build our own ground, and advise on yours.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="mining.html">Mining</a>
+        <a href="advisory.html">Advisory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+254701589996">0701 589 996</a>
+        <a href="mailto:info@insituresourcesadvisoryltd.africa">info@insituresourcesadvisoryltd.africa</a>
+        <p>PO Box 64960-00620<br>Nairobi, Kenya</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <small>&copy; 2026 Insitu Resources Advisory Ltd. Mining &amp; advisory. Nairobi, Kenya.</small>
+      <small>Built on the in-situ principle.</small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
