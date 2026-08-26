@@ -16,8 +16,9 @@ Open any `.html` file and edit the text directly. Shared look lives in `styles.c
 Placeholder blocks (dashed boxes) mark where real content goes later — portfolio projects, team profiles.
 
 ## Contact form
-The form is a front-end demo and does not send yet. To receive messages, connect it to a
-form service (Formspree, Getform) or your own backend.
+Submits via Formspree (https://formspree.io/f/xzebppwj) to alex@insituresourcesadvisoryltd.com.
+To change the recipient or form fields, edit the form in the Formspree dashboard and update the
+`action` URL in `contact.html` if the endpoint changes.
 
 ## Deploy (GitHub Pages)
 Push to the `main` branch, then in the repo: Settings > Pages > Deploy from a branch > main > / (root).

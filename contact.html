@@ -51,17 +51,45 @@
         </ul>
       </div>
       <div>
-        <form onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Thanks. This is a demo form. Connect it to a form service or your inbox to receive messages.';">
+        <form id="contact-form" action="https://formspree.io/f/xzebppwj" method="POST">
           <div class="frow">
-            <input type="text" placeholder="Full name" required>
-            <input type="text" placeholder="Company">
+            <input type="text" name="name" placeholder="Full name" required>
+            <input type="text" name="company" placeholder="Company">
           </div>
-          <input type="email" placeholder="Email address" required>
-          <input type="text" placeholder="Subject (mining partnership / advisory)">
-          <textarea rows="4" placeholder="Tell us about your ground, project, or question"></textarea>
+          <input type="email" name="email" placeholder="Email address" required>
+          <input type="text" name="subject" placeholder="Subject (mining partnership / advisory)">
+          <textarea name="message" rows="4" placeholder="Tell us about your ground, project, or question" required></textarea>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-primary">Send message</button>
           <p class="form-note"></p>
         </form>
+        <script>
+          document.getElementById('contact-form').addEventListener('submit', async function(e){
+            e.preventDefault();
+            var form = e.target;
+            var note = form.querySelector('.form-note');
+            var btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            note.textContent = 'Sending…';
+            try {
+              var res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              });
+              if (res.ok) {
+                form.reset();
+                note.textContent = 'Thanks — your message has been sent. We will be in touch soon.';
+              } else {
+                note.textContent = 'Something went wrong. Please email info@insituresourcesadvisoryltd.africa directly.';
+              }
+            } catch (err) {
+              note.textContent = 'Something went wrong. Please email info@insituresourcesadvisoryltd.africa directly.';
+            } finally {
+              btn.disabled = false;
+            }
+          });
+        </script>
       </div>
     </div>
   </div>
